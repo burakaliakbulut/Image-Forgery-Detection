@@ -32,7 +32,7 @@ def _filter_good_matches(matches, keypoints):
         if len(match) < 3:
             continue
             
-        m, n, o = match
+        _, n, o = match
         
         # Guard Clause: Kalite farkı yeterli değilse atla
         if n.distance >= 0.75 * o.distance:

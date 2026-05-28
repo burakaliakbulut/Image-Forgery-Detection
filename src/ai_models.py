@@ -39,7 +39,7 @@ def analyze_with_ai(image_path, model_type="CNN"):
     try:
         pil_img = Image.open(image_path).convert('RGB')
         img = cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR)
-    except Exception as e:
+    except Exception:
         return None, 0.0
 
     if model_type == "CNN":
